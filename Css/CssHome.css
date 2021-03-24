@@ -1,0 +1,119 @@
+	* {
+  		box-sizing: border-box;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		margin: 0;
+	}
+
+/*Header*/
+	#headTag {
+		position: sticky;
+		width: 100px;
+		height: 100%;
+		background: transparent;
+		padding: 10px;
+    	top: 0;
+	}
+
+	#menuTag {
+		display: flex;
+		flex-direction: column;
+		width: auto;
+		height: 100%;
+  		padding: 5px 15px 5px 15px;
+	}
+
+	#menuBtn {
+		float: left;
+		width: 100%;
+		height: 45px;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		padding: 0;
+		transition: background 0.3s;
+	}
+
+	#menuBtn:hover {
+		background: lightgrey;
+	}
+
+	#menuBtnImg {	
+		width: 100%;
+		height: 100%;
+		background: url(../Assets/menuIcon.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+
+	#botAlign {
+		position: relative;
+		flex-grow: 1;
+		float: left;
+		width: 100%;
+		padding-bottom: 10px;
+	}
+
+	#botBtnsMenu {
+		position: absolute;
+		width: 100%;
+		height: auto;
+		background: red;
+		bottom: 0;
+	}
+
+	#openBtn {
+		float: left;
+		width: 100%;
+		height: 100px;
+		background: red;
+		cursor: pointer;
+		bottom: 0;
+	}
+
+/*Body*/
+	#bodyTag {
+		width: auto;
+		height: 5000px;
+		background: green;
+		padding: 100px 20px 50px 20px;
+	}
+
+	/*SCREEN WIDTH UNDER 420px*/
+	@media only screen and (max-width: 420px) {
+		
+		
+	}
+
+	/*SCREEN WIDTH UNDER 380px*/
+	@media only screen and (max-width: 380px) {
+		
+		
+	}
+
+	/*SCREEN WIDTH UNDER 374px*/
+	@media only screen and (max-width: 374px) {
+		
+		
+	}
+
+	/*SCREEN WIDTH UNDER 300px*/
+	@media only screen and (max-width: 300px) {
+		
+		
+	}
+/**/
+
+/*ANIMATIONS*/
+	@keyframes spinOnLoading {
+		from { 
+            transform: rotate(0deg); 
+        } to { 
+            transform: rotate(360deg); 
+        }
+	}

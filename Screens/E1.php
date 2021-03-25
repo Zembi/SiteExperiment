@@ -27,7 +27,7 @@
 	}
 
 	body {
-		/*background: url("/SitePics/herbaBody.jpg");
+		/*background: url("../GitSitePics/herbaBody.jpg");
 		background-position: center;
 		background-position: 0 1vw;
 		background-size: 20% 30%;*/
@@ -174,7 +174,7 @@
 
 	#AudioPlayImg {
 		width: 80%; height: 70%;
-		content: url("/SitePics/pauseLightBlueButton.png");
+		content: url("../GitSitePics/pauseLightBlueButton.png");
 		margin: 3px 0 0 -2px;
 	}
 
@@ -280,7 +280,7 @@
 	.ImgArrow {
 		float: right;
 		width: 18px; height: 18px;
-		content: url("/SitePics/seaBlueArrow.png");
+		content: url("../GitSitePics/seaBlueArrow.png");
 		border-radius: 0 50% 50% 0;
 		transform: rotateZ(180deg);
 		margin-top: 3px; margin-right: 0.2vw;
@@ -288,7 +288,7 @@
 	}
 
 	.SpecCatgrButton:hover .ImgArrow {
-		content: url("/SitePics/orangeArrow.png");
+		content: url("../GitSitePics/orangeArrow.png");
 		transform: translateX(5px) rotateZ(0deg);
 	}
 			/**/
@@ -326,73 +326,72 @@
 	}
 
 				/*CHECKBOXES*/
-	.Container {
-		display: table;
-  		position: relative;
- 	 	cursor: pointer;
-  		font-size: 18px;
-  		border-radius: 50% 0 0 50%;
-  		padding-left: 25px;
-  		margin-bottom: 8px; margin-left: 10px;
-   		-webkit-use8-select: none;
-  		-moz-user-select: none;
-  		-ms-user-select: none;
-  		user-select: none;
+	.container {
+	  	display: block;
+	  	position: relative;
+	  	padding-left: 35px;
+	  	margin-bottom: 12px;
+	  	cursor: pointer;
+	  	font-size: 22px;
+	  	-webkit-user-select: none;
+	  	-moz-user-select: none;
+	  	-ms-user-select: none;
+	 	user-select: none;
 	}
 
-	.ContainerPar {
-		display: table;
-		word-break: break-all;
-		border: 1px solid red;
+				/* Hide the browser's default radio button */
+	.container input {
+	  	position: absolute;
+	  	opacity: 0;
+	  	cursor: pointer;
 	}
 
-				/* Hide the browser's default checkbox */
-	.Container input {
-  		position: absolute;
-  		opacity: 0;
-  		cursor: pointer;
-  		height: 0;
-  		width: 0;
+				/* Create a custom radio button */
+	.checkmark {
+	  	position: absolute;
+	  	top: 2px;
+	  	left: 10px;
+	  	height: 18px;
+	  	width: 18px;
+	 	background: transparent;
+	  	border-radius: 50%;
+	  	border: 2px solid rgb(0, 92, 153);
 	}
 
-				/* Create a custom checkbox */
-	.Checkmark {
-  		position: absolute;
-  		top: -3px;
-  		left: -1.5px;
-  		height: 18px;
-  		width: 18px;
-  		background-color: transparent;
-  		border-radius: 50%;
-  		border: 1px solid rgb(0, 92, 153);
-  		margin-top: 4px;
+				/* On mouse-over, add a grey background color */
+	.container:hover input ~ .checkmark {
+	  	background: rgba(0, 46, 77, 0.5);
 	}
 
-	.Container:hover input ~ .Checkmark {
-		background-color: rgba(0, 46, 77, 0.5);
+				/* When the radio button is checked, add a blue background */
+	.container input:checked ~ .checkmark {
+	  	background: transparent;
 	}
 
-				/* Create the checkmark/indicator (hidden when not checked) */
-	.Checkmark:after {
-  		content: "";
-  		position: absolute;
-  		display: none;
+	.container:hover input:checked ~ .checkmark {
+	  	background: rgba(0, 46, 77, 0.5);
 	}
 
-				/* Show the checkmark when checked */
-	.Container input:checked ~ .Checkmark:after {
-	 	display: block;
-	 	background: rgb(0, 92, 153);
-	 	border: solid rgb(0, 92, 153);
+				/* Create the indicator (the dot/circle - hidden when not checked) */
+	.checkmark:after {
+		display: none;
+		position: absolute;
+	  	content: "";
 	}
 
-				/* Style the checkmark/indicator */
-	.Container .Checkmark:after {
-  		left: 3.5px;
-  		top: 3.75px;
-  		width: 6px;
-  		height: 6px;
-  		border-radius: 50%;
+				/* Show the indicator (dot/circle) when checked */
+	.container input:checked ~ .checkmark:after {
+	  	display: block;
+	}
+
+				/* Style the indicator (dot/circle) */
+	.container .checkmark:after {
+	 	top: 2px;
+		left: 2px;
+		width: 10px;
+		height: 10px;
+		background: rgb(0, 92, 153);
+		border-radius: 50%;
 	}
 				/**/
 			/**/
@@ -535,7 +534,7 @@
 	#SortBy1stImgArrow {
 		float: right;
 		position: relative;
-		content: url("/SitePics/darkblueArrowSortBy.png");
+		content: url("../GitSitePics/darkblueArrowSortBy.png");
 		width: 18px; height: 12px;
 		margin-right: 8%; margin-top: 8%;
 	}
@@ -787,13 +786,13 @@
 
 	<div id="MenuLogoContainer">
 
-		<img id="MenuLogo1" src="/SitePics/DarkBlueLogo1.png">
+		<img id="MenuLogo1" src="../GitSitePics/DarkBlueLogo1.png">
 				
-		<img id="MenuLogo2" src="/SitePics/DarkBlueLogo1.png">
+		<img id="MenuLogo2" src="../GitSitePics/DarkBlueLogo1.png">
 
-		<img id="MenuLogo3" src="/SitePics/DarkBlueLogo1.png">
+		<img id="MenuLogo3" src="../GitSitePics/DarkBlueLogo1.png">
 
-		<img id="MenuLogo4" src="/SitePics/DarkBlueLogo1.png">
+		<img id="MenuLogo4" src="../GitSitePics/DarkBlueLogo1.png">
 
 	</div>
 
@@ -854,7 +853,7 @@
 
 		</div>
 
-		<audio id="AudioPlay" src="\SiteMusic\No1.mp3" loop>
+		<audio id="AudioPlay" src="../GitSiteMusic\No1.mp3" loop>
 			If you're reading this, audio isn't supported. 
 		</audio>
 
@@ -866,7 +865,7 @@
 		function HomeClick() {
 
 			sessionStorage.setItem('situation', 'LeftMyAccount');
-			document.location.href = "http://localhost/E/Screens/SignInScreen.php";
+			document.location.href = "SignInScreen.php";
 		}
 
 	</script>
@@ -925,7 +924,7 @@
 
 				audioPlay.play();
 				audioMainC.children[0].innerHTML = "Click here to stop playing";
-				audioPlayImg.style.content = "url('/SitePics/playLightBlueButton.png')";
+				audioPlayImg.style.content = "url('../GitSitePics/playLightBlueButton.png')";
 				audioPlayImg.style.width = "90%";
 				audioPlayImg.style.height = "99%";
 				audioPlayImg.style.margin = "0 0 0 -2px";
@@ -934,7 +933,7 @@
 
 				audioPlay.pause();
 				audioMainC.children[0].innerHTML = "Click here to start playing";
-				audioPlayImg.style.content = "url('/SitePics/pauseLightBlueButton.png')";
+				audioPlayImg.style.content = "url('../GitSitePics/pauseLightBlueButton.png')";
 				audioPlayImg.style.width = "80%";
 				audioPlayImg.style.height = "70%";
 				audioPlayImg.style.margin = "3px 0 0 -2px";
@@ -1347,13 +1346,13 @@
 
 			//Created here elements
 			var mainCatgrC = document.createElement("label")
-			mainCatgrC.className = "Container";
+			mainCatgrC.className = "container";
 			mainCatgrC.innerHTML = categoryObject.name;
 
 			var inputCheckbox = document.createElement("input");
-			inputCheckbox.className = "InputCheck";
+			inputCheckbox.className = "cnputCheck";
 			inputCheckbox.id = countPosOfMainCatgrs;
-			inputCheckbox.type = "Checkbox";
+			inputCheckbox.type = "checkbox";
 			inputCheckbox.name = categoryObject.name;
 
 			inputCheckbox.onclick = CheckboxesEvents;
@@ -1366,7 +1365,7 @@
 			mainCatgrsOfThis.push(categoryObject.name);
 
 			var checkMarkTik = document.createElement("span");
-			checkMarkTik.className = "Checkmark";
+			checkMarkTik.className = "checkmark";
 
 			mainCatgrsC.appendChild(mainCatgrC);
 			mainCatgrC.appendChild(inputCheckbox);
